@@ -46,7 +46,9 @@ captured in `uv.lock`.
 
 ```bash
 uv sync              # Create/restore the virtual env from uv.lock
-uv run main.py       # Run the entry point
+uv run main.py       # Run the default codegen mode
+uv run main.py --mode chatbot
+uv run main.py --mode codegen --task "return a list of numbers" --language python
 uv run python ...    # Run anything inside the project's environment
 uv add <package>     # Add a new dependency
 uv lock --upgrade    # Refresh the lockfile to the latest compatible versions
